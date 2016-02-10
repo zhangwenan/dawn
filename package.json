@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zhangwenan/dawn#readme",
   "dependencies": {
-    "mysql": "^2.10.2"
+    "mysql": "^2.10.2",
+    "qqmail": "^1.0.0"
   }
 }

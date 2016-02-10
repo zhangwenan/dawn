@@ -1,5 +1,6 @@
 var fs = require('fs');
 var mysql = require('mysql');
+var qqmail = require('qqmail');
 
 var conf_json = 'dawn.json';
 var conf = {
@@ -24,10 +25,12 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-connection.query('SELECT count(*) as total from qq where status=1', function(err, rows, fields) {
+connection.query('SELECT id,qq,password from qq where status=1 order by id limit 1', function(err, rows, fields) {
   if (err) throw err;
-
-  console.log('The solution is: ', rows[0].total);
+  for(var i=0; i<rows.length; i++){
+    console.log(rows[i].id, rows[i].qq, rows[i].password);
+    qqmail.login(rows[i].qq, rows[i].password);
+  }
 });
 
 connection.end();
