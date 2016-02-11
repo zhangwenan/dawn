@@ -18,6 +18,6 @@
   "homepage": "https://github.com/zhangwenan/dawn#readme",
   "dependencies": {
     "mysql": "^2.10.2",
-    "qqmail": "^1.0.0"
+    "qqmail": "^1.1.1"
   }
 }
