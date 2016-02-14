@@ -7,6 +7,6 @@
   "softid":"12345",
   "softkey":"bbdd33448877",
 
-  "ysdm_user":"test",
-  "ysdm_password":"hello1234"
+  "user":"test",
+  "password":"hello1234"
 }
