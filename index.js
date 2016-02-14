@@ -6,6 +6,7 @@ var cookie_util = require('./lib/cookie_util.js');
 
 
 var conf_json = 'dawn.json';
+var dev_conf_json = 'dawn_local.json';
 var conf = {
   "mysql_host":"",
   "mysql_user":"",
@@ -18,7 +19,12 @@ var conf = {
   "username":"",
   "password":""
 };
-conf = JSON.parse(fs.readFileSync(process.cwd() + '/' + conf_json, "utf-8"));
+try{
+  conf = JSON.parse(fs.readFileSync(process.cwd() + '/' + dev_conf_json, "utf-8"));
+}
+catch(e){
+  conf = JSON.parse(fs.readFileSync(process.cwd() + '/' + conf_json, "utf-8"));
+}
 qqmail.init(conf);
 
 var connection = mysql.createConnection({
