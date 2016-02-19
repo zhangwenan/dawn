@@ -2,7 +2,7 @@ var fs = require('fs');
 var mysql = require('mysql');
 var qqmail = require('qqmail');
 var async = require('async');
-var cookie_util = require('./lib/cookie_util.js');
+var cookie_util = require('cookie-util');
 
 
 var conf_json = 'dawn.json';
