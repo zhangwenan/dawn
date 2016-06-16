@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var qqmail = require('qqmail');
 //var qqmail = require('../qqmail/index');
 var async = require('async');
-var cookie_util = require('cookie-util');
+var cookie_util = require('../cookie-util/index');
 
 
 var conf_json = 'dawn.json';
